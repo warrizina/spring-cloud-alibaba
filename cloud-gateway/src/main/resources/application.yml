@@ -1,0 +1,14 @@
+
+server:
+  port: 9093
+spring:
+  cloud:
+    gateway:
+      routes:
+        # 指定唯一id
+        - id: order-server
+        #目标url
+        uri: http:localhost:8080
+        # 断言
+          predicates:
+            - Cookie: name,age

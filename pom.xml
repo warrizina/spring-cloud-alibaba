@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <modules>
+        <module>cloud-nacos</module>
+        <module>cloud-gateway</module>
+        <module>cloud-consumer</module>
+        <module>cloud-providers</module>
+    </modules>
+    <packaging>pom</packaging>
+    <groupId>com.datahunter.cn</groupId>
+    <artifactId>spring-cloud-alibaba</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>spring-cloud-alibaba</name>
+    <description>spring-cloud-alibaba</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <!--  spriong cloud 的版本依赖       -->
+        <spring.cloud.version>Hoxton.SR8</spring.cloud.version>
+       <!--  sprinig cloud alibaba 版本依赖-->
+        <spring.could.alibaba.version>2.2.5.RELEASE</spring.could.alibaba.version>
+        <!-- spring boot 的父级依赖       -->
+        <spring.boot.parent.version>2.3.2.RELEASE</spring.boot.parent.version>
+    </properties>
+
+    <dependencyManagement>
+            <dependencies>
+                <!--  spring cloud 版本              -->
+                <dependency>
+                    <groupId>com.alibaba.cloud</groupId>
+                    <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                    <version>${spring.could.alibaba.version}</version>
+                    <type>pom</type>
+                    <scope>import</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-parent</artifactId>
+                    <version>${spring.boot.parent.version}</version>
+                    <type>pom</type>
+                    <scope>import</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-dependencies</artifactId>
+                    <version>${spring.cloud.version}</version>
+                    <type>pom</type>
+                    <scope>import</scope>
+                </dependency>
+            </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
