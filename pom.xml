@@ -8,6 +8,7 @@
         <module>cloud-gateway</module>
         <module>cloud-consumer</module>
         <module>cloud-providers</module>
+        <module>datasource</module>
     </modules>
     <packaging>pom</packaging>
     <groupId>com.datahunter.cn</groupId>
@@ -24,6 +25,15 @@
         <spring.could.alibaba.version>2.2.5.RELEASE</spring.could.alibaba.version>
         <!-- spring boot 的父级依赖       -->
         <spring.boot.parent.version>2.3.2.RELEASE</spring.boot.parent.version>
+
+        <mybatis-plus-spring-boot-starter.version>3.4.1</mybatis-plus-spring-boot-starter.version>
+        <spring-boot-jdbc>2.3.0.RELEASE</spring-boot-jdbc>
+        <!-- swagger 版本        -->
+        <springfox-swagger2.version>2.4.0</springfox-swagger2.version>
+        <!-- swagger ui       -->
+        <swagger-bootstrap-ui.version>1.6</swagger-bootstrap-ui.version>
+        <!--  lombok  -->
+        <lombok.version>1.18.12</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -49,6 +59,32 @@
                     <version>${spring.cloud.version}</version>
                     <type>pom</type>
                     <scope>import</scope>
+                </dependency>
+                <dependency>
+                    <groupId>com.baomidou</groupId>
+                    <artifactId>mybatis-plus-boot-starter</artifactId>
+                    <version>${mybatis-plus-spring-boot-starter.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-jdbc</artifactId>
+                    <version>${spring-boot-jdbc}</version>
+                </dependency>
+                <dependency>
+                    <groupId>io.springfox</groupId>
+                    <artifactId>springfox-swagger-ui</artifactId>
+                    <version>${springfox-swagger2.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>com.github.xiaoymin</groupId>
+                    <artifactId>swagger-bootstrap-ui</artifactId>
+                    <version>${swagger-bootstrap-ui.version}</version>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.projectlombok</groupId>
+                    <artifactId>lombok</artifactId>
+                    <version>${lombok.version}</version>
                 </dependency>
             </dependencies>
     </dependencyManagement>
