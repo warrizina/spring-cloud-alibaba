@@ -5,7 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/cloud-consumer/cloud-consumer.iml" filepath="$PROJECT_DIR$/cloud-consumer/cloud-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-gateway/cloud-gateway.iml" filepath="$PROJECT_DIR$/cloud-gateway/cloud-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-nacos/cloud-nacos.iml" filepath="$PROJECT_DIR$/cloud-nacos/cloud-nacos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-pay/cloud-pay.iml" filepath="$PROJECT_DIR$/cloud-pay/cloud-pay.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-providers/cloud-providers.iml" filepath="$PROJECT_DIR$/cloud-providers/cloud-providers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/datasource/datasource.iml" filepath="$PROJECT_DIR$/datasource/datasource.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba.iml" />
     </modules>

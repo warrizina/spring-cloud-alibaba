@@ -9,6 +9,8 @@
         <module>cloud-consumer</module>
         <module>cloud-providers</module>
         <module>datasource</module>
+        <module>cloud-pay</module>
+        <module>common</module>
     </modules>
     <packaging>pom</packaging>
     <groupId>com.datahunter.cn</groupId>

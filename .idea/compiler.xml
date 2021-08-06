@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common" />
+        <module name="cloud-consumer" />
+        <module name="datasource" />
+        <module name="cloud-pay" />
+        <module name="cloud-nacos" />
+        <module name="cloud-providers" />
+        <module name="cloud-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-consumer" target="1.5" />
+      <module name="cloud-gateway" target="8" />
+      <module name="cloud-nacos" target="1.5" />
+      <module name="cloud-pay" target="1.7" />
+      <module name="cloud-providers" target="1.5" />
+      <module name="common" target="1.5" />
+      <module name="datasource" target="8" />
+      <module name="spring-cloud-alibaba" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-consumer" options="" />
+      <module name="cloud-gateway" options="" />
+      <module name="cloud-nacos" options="" />
+      <module name="datasource" options="" />
+      <module name="spring-cloud-alibaba" options="-parameters" />
+    </option>
+  </component>
+</project>

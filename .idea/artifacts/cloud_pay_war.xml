@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cloud-pay:war">
+    <output-path>$PROJECT_DIR$/cloud-pay/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>cloud-pay</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="cloud-pay.war">
+      <element id="artifact" artifact-name="cloud-pay:war exploded" />
+    </root>
+  </artifact>
+</component>
