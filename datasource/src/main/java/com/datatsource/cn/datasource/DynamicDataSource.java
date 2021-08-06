@@ -1,5 +1,6 @@
 package com.datatsource.cn.datasource;
 
+import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 import java.util.Map;
@@ -14,20 +15,14 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
     @Override
     protected Object determineCurrentLookupKey() {
         System.out.println("=============" + DynamicDataSourceContextHolder.getDataSourceType());
+
         return DynamicDataSourceContextHolder.getDataSourceType();
     }
 
     public  DynamicDataSource(){
-        System.out.println("-------------------------");
+
         DynamicDataSourceContextHolder.setDynamicDataSource(this);
         this.setTargetDataSources(DynamicDataSourceContextHolder.shopDataSource);
-    }
-
-
-    @Override
-    public void setTargetDataSources(Map<Object, Object> targetDataSources) {
-        System.out.println("-=-=-=-=-=-=-=--===-=-");
-        super.setTargetDataSources(targetDataSources);
     }
 
 }

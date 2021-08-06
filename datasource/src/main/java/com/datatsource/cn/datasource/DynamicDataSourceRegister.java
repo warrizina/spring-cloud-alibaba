@@ -48,7 +48,8 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         map.put("userName",environment.getProperty("spring.datasource.username"));
         map.put("password",environment.getProperty("spring.datasource.password"));
         defaultDataSource =  createDataSource(map);
-        DynamicDataSourceContextHolder.setDatasourceKey(null);
+        DynamicDataSourceContextHolder.createDataSourceCone("PoolName[dataSource]",defaultDataSource);
+        DynamicDataSourceContextHolder.setDataSourceTypeData("PoolName[dataSource]");
 
     }
 
@@ -62,7 +63,7 @@ public class DynamicDataSourceRegister implements ImportBeanDefinitionRegistrar,
         Class<?extends DataSource> dataSourceType = (Class<? extends DataSource>) Class.forName(DATASOURCE_TYPE_DEFAULT);
         // 返回数据源对象
         return DataSourceBuilder.create().driverClassName(map.get("driverName").toString())
-                .url(map.get("url").toString())
+                .url(map.get("url").toString()).username(map.get("userName").toString())
                 .password(map.get("password").toString())
                 .type(dataSourceType).build();
     }

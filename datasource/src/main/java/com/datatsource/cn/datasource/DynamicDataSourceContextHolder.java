@@ -55,6 +55,12 @@ public class DynamicDataSourceContextHolder {
 
     }
 
+
+    public static void createDataSourceCone(String key,DataSource dataSource){
+        shopDataSource.put(key, dataSource);
+    }
+
+
     /**
      * 设置数据源
      *
@@ -135,5 +141,9 @@ public class DynamicDataSourceContextHolder {
      */
     public static String getDataSourceType() {
         return contextHolder.get();
+    }
+
+    public static void setDataSourceTypeData(String datasourceKey) {
+        contextHolder.set(datasourceKey);
     }
 }
